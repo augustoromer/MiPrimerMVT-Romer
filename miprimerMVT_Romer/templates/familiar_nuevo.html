@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    {% for familiar in familiares_creados %}
+        <hr size="5px" color="black"/>
+        <h3 style='color:rgb(132, 0, 0);font-family: Trebuchet MS;font-size: large;'>Se ha creado un nuevo familiar.</h3>
+        <h3 style='color:rgb(0, 22, 40);font-family: Trebuchet MS;font-size: small;'>Su N° de dni es {{familiar.dni}}.</h3>
+        <h3 style='color:rgb(0, 22, 40);font-family: Trebuchet MS;font-size: small;'>El familiar añadido se llama {{familiar.nombre}} {{familiar.apellido}}.</h3>
+        <h3 style='color:rgb(0, 22, 40);font-family: Trebuchet MS;font-size: small;'>Su fecha de nacimiento es {{familiar.fecha_nacimiento}}.</h3>
+        <h3 style='color:rgb(0, 22, 40);font-family: Trebuchet MS;font-size: small;'>El parentesco con el usuario es {{familiar.parentesco}}.</h3>
+        <h3 style='color:rgb(0, 22, 40);font-family: Trebuchet MS;font-size: small;'>Pertenece al árbol genealógico {{familiar.rama_familiar}}.</h3>
+
+    {% endfor %}
+</body>
+</html>
